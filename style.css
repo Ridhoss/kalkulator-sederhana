@@ -1,0 +1,80 @@
+:root {
+    /* color */
+
+    --buttons: #eee;
+    --background: #e0e3eb;
+    --operator: #d4a056;
+    --preprimary: #4a4c5c;
+    --redpastel: #ff6868;
+    --primary: #002939;
+    --poppins: "Poppins", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--poppins);
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background);
+}
+
+.containers {
+    position: relative;
+    max-width: 300px;
+    width: 100%;
+    border-radius: 12px;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+}
+
+.display {
+    height: 80px;
+    width: 100%;
+    outline: none;
+    border: none;
+    text-align: right;
+    margin-bottom: 10px;
+    font-size: 25px;
+    color: var(--primary);
+    pointer-events: none;
+}
+
+.button {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.button button {
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: var(--buttons);
+}
+
+.button button:active {
+    transform: scale(0.99);
+}
+
+.operator {
+    color: #fff;
+    background-color:  var(--primary) !important;
+}
+
+.top {
+    background-color: var(--preprimary) !important;
+}
+
+.equals {
+    background-color: var(--operator) !important;
+}
