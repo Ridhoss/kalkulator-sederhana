@@ -1,9 +1,15 @@
 // display
 const display = document.getElementById("display");
 
+const max = 15;
+
 // menampilkan ke layar
 function tampilkan(input) {
-  display.value += input;
+  if (display.value.length < max) {
+    display.value += input;
+  } else {
+      alert('Maximal 15 Character');
+  }
 }
 
 // menghapus isi layar
@@ -22,5 +28,9 @@ function calculate() {
 
 // menghapus 1
 function del() {
-  display.value = display.value.toString().slice(0, -1);
+  if (display.value === "Error") {
+    display.value = "";
+  } else {
+    display.value = display.value.toString().slice(0, -1);
+  }
 }
